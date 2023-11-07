@@ -48,7 +48,7 @@ ans = (1, 3, 1, 4, 3, 1, 3, 3)
 
 # printing all the answers
 for i in range(len(hints)):
-    print(RED + f"Q{i + 1}.{ques[i]}")
+    print(YELLOW + f"Q{i + 1}.{ques[i]}")
 
     for j in range(len(hints[i])):
         print(BACKGROUND_BLUE + f"{j + 1}.{hints[i][j]}")
@@ -57,9 +57,9 @@ for i in range(len(hints)):
     # taking user input
     user = int(input("Enter your answer: "))
     if user == ans[i]:
-        print("Correct Answer")
+        print(GREEN + "Correct Answer")
         price = price + 400.50
     else:
-        print("Wrong Answer")
+        print(RED + "Wrong Answer", "The correct answer is {}".format(BLUE + str(ans[i])))
 
 print(f"Your Reward is {GREEN + f"${price:.2f}"}")
